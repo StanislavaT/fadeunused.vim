@@ -1,0 +1,57 @@
+*fadeunused.txt*	Fades variables whose values are never used with
+gray background.
+
+==============================================================================
+CONTENTS                                        *fadeunused*   *fadeunused-contents*
+
+    Installation................................: |fadeunused-installation|
+    Usage.......................................: |fadeunused-usage|
+    Settings....................................: |fadeunused-settings|
+    Issues......................................: |fadeunused-issues|
+
+
+==============================================================================
+INSTALLATION                                               *fadeunused-installation*
+
+The easiest way to install the plugin is with a plugin manager:
+
+- vim-plug: https://github.com/junegunn/vim-plug
+
+If you use one, just follow the instructions in its documentation.
+
+You can install the plugin yourself using Vim's |packages| functionality by
+cloning the project (or adding it as a submodule) under
+`~/.vim/pack/<any-name>/start/`. For example:
+>
+    git clone https://github.com/StanislavaT/fadeunused.vim ~/.vim/pack/_/start/fadeunused
+<
+This should automatically load the plugin for you on Vim start. Alternatively,
+you can add it to `~/.vim/pack/<any-name>/opt/` instead and load it in your
+.vimrc manually with:
+>
+    packadd fadeunused
+<
+
+==============================================================================
+USAGE                                                             *fadeunused-usage*
+
+This plugin fades all variables whose values are not used anywhere. It works
+on Java, CPP and Python.
+>
+<
+Executing the |:FindVariables| command or using the provided |<F6>| mapping
+will fade unused variables in the code. The |<F7>| mapping will unfade them.
+
+==============================================================================
+SETTINGS                                                       *fadeunused-settings*
+
+It is possible to change the mappings in plugin/fadeunused.vim file.
+
+==============================================================================
+ISSUES                                                           *fadeunused-issues*
+
+Any issues and suggestions are very welcome on the github bugtracker:
+https://github.com/StanislavaT/fadeunused.vim/issues
+
+
+vim:tw=78:sw=4:ft=help:norl:
